@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from 'motion/react'
 import { Lightbulb, ClipboardList, PenTool, Code2, Rocket } from 'lucide-react'
 import { SectionLabel } from '../ui/SectionLabel'
 import { Button } from '../ui/Button'
+import { assetPath } from '../../lib/site'
 
 const journey = [
   { label: 'Idea Consultation', icon: Lightbulb },
@@ -46,7 +47,7 @@ export function ProductShowcase() {
           <div className="flex items-center justify-center gap-4 xl:justify-start">
             <div className="relative h-[380px] w-full max-w-sm shrink-0 sm:h-[420px]">
               <motion.img
-                src="/images/product/product-development.webp"
+                src={assetPath('/images/product/product-development.webp')}
                 alt="App interface mockup with UI/UX planning elements"
                 style={{ y: imageY, rotate: imageRotate }}
                 initial={{ opacity: 0, scale: 0.9 }}

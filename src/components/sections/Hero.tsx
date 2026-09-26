@@ -2,6 +2,7 @@ import { useRef, type MouseEvent } from 'react'
 import { motion, useMotionValue, useSpring, useTransform, useReducedMotion } from 'motion/react'
 import { Play, Sparkles, Lightbulb, Cpu, Layers } from 'lucide-react'
 import { Button } from '../ui/Button'
+import { assetPath } from '../../lib/site'
 
 const heroFeatures = [
   { label: 'Idea to Product', icon: Lightbulb },
@@ -128,7 +129,7 @@ export function Hero() {
             className="relative h-full w-full overflow-hidden rounded-[3rem] bg-[var(--color-peach)] shadow-2xl shadow-black/10"
           >
             <img
-              src="/images/hero/hero-person.webp"
+              src={assetPath('/images/hero/hero-person.webp')}
               alt="Global Tech Byte software engineer"
               className="h-full w-full object-cover object-top"
               width={1024}

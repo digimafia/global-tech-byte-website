@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, MessageCircle } from 'lucide-react'
-import { site, navLinks, contactLink, footerServiceLinks } from '../../lib/site'
+import { assetPath, site, navLinks, contactLink, footerServiceLinks } from '../../lib/site'
 import { trackEvent } from '../../lib/analytics'
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="inline-flex rounded-xl bg-white px-3 py-2">
-              <img src="/brand/logo.webp" alt="Global Tech Byte" className="h-9 w-auto" width={1492} height={992} />
+              <img src={assetPath('/brand/logo.webp')} alt="Global Tech Byte" className="h-9 w-auto" width={1492} height={992} />
             </div>
             <p className="mt-3 text-xs uppercase tracking-widest text-white/40">Global Tech Byte Private Limited</p>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/60">

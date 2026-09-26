@@ -1,3 +1,5 @@
+import { assetPath } from '../lib/site'
+
 export interface Solution {
   id: string
   category: string
@@ -16,20 +18,20 @@ export const solutions: Solution[] = [
     category: 'Web Application',
     title: 'Business Dashboard',
     description: 'A data-driven operations dashboard for tracking business performance in real time.',
-    image: '/images/solutions/business-dashboard.webp',
+    image: assetPath('/images/solutions/business-dashboard.webp'),
   },
   {
     id: 'service-platform',
     category: 'Mobile App',
     title: 'Service Platform',
     description: 'A booking and service-management app connecting customers with providers.',
-    image: '/images/solutions/service-platform.webp',
+    image: assetPath('/images/solutions/service-platform.webp'),
   },
   {
     id: 'online-store',
     category: 'E-Commerce',
     title: 'Online Store',
     description: 'A conversion-focused storefront with a streamlined checkout experience.',
-    image: '/images/solutions/online-store.webp',
+    image: assetPath('/images/solutions/online-store.webp'),
   },
 ]

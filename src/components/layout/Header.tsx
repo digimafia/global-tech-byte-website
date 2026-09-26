@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'motion/react'
 import { ChevronDown, Menu, X, Briefcase, GraduationCap, ArrowUpRight } from 'lucide-react'
-import { navLinks, joinTeamDropdown, contactLink, site } from '../../lib/site'
+import { assetPath, navLinks, joinTeamDropdown, contactLink, site } from '../../lib/site'
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -37,7 +37,7 @@ export function Header() {
         }`}
       >
         <Link to="/" className="focus-ring flex min-w-0 items-center gap-2.5 rounded-lg" aria-label="Global Tech Byte home">
-          <img src="/brand/logo.webp" alt="" className="h-9 w-auto shrink-0 sm:h-10" width={1492} height={992} />
+          <img src={assetPath('/brand/logo.webp')} alt="" className="h-9 w-auto shrink-0 sm:h-10" width={1492} height={992} />
           <span className="hidden min-w-0 flex-col leading-tight sm:flex">
             <span className="truncate text-base font-extrabold tracking-tight text-[var(--color-ink)]">
               Global Tech Byte

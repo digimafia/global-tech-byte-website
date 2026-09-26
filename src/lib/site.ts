@@ -9,6 +9,9 @@ export const site = {
   domain: 'https://www.globaltechbyte.com',
 }
 
+export const assetPath = (path: string) =>
+  import.meta.env.BASE_URL + path.replace(/^\//, '')
+
 export const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
